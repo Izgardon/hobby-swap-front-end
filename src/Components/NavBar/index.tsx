@@ -1,6 +1,7 @@
 import React from "react";
 
 import { SearchBar } from "../";
+import "./navbar.scss";
 
 interface HeaderProps {
   buttonText: string;
@@ -8,7 +9,7 @@ interface HeaderProps {
   //etc
 }
 
-export const NavBar = (props: HeaderProps) => {
+export const NavBar = () => {
   return (
     <div className="navbar">
       <SearchBar />
