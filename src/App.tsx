@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar clearUserDetails={clearUserDetails} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/myaccount" element={<MyAccountPage />} />
