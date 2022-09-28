@@ -5,13 +5,11 @@ import { NavLink } from "react-router-dom";
 import { SearchBar } from "../";
 import "./navbar.scss";
 
-interface HeaderProps {
-  buttonText: string;
-  count: number;
-  //etc
-}
+import { State } from "../../State";
 
 export const NavBar = () => {
+  const loggedIn = useSelector((state: State) => state.loggedIn);
+
   return (
     <>
       <header className="navbar">

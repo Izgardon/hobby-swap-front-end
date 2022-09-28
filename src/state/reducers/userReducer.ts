@@ -1,5 +1,6 @@
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
+import { StatesInterface } from "../../Interfaces";
 
 interface UserState {
   data: { username: string; email: string; error?: string };

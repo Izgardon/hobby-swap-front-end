@@ -3,7 +3,9 @@ import { Dispatch } from "redux";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
-export const setUserDetails = (data: { username: string; email: string }) => {
+import { StatesInterface } from "../../Interfaces";
+
+export const setUserDetails = (data: StatesInterface["UserState"]) => {
   return (dispatch: Dispatch<Action>) => {
     dispatch({
       type: ActionType.SETUSER,

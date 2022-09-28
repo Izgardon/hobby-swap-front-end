@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "@reduxjs/toolkit";
 
-import { actionCreators, State } from "./state";
+import { actionCreators, State } from "./State";
 import { NavBar } from "./Components";
 
 import {
