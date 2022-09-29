@@ -1,29 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import { SearchBar } from "../";
+import { SearchBar, LoginModal } from "../";
+
 import "./navbar.scss";
 
 import { State } from "../../State";
 
 export const NavBar = () => {
+  const [modalShow, setModalShow] = useState(false);
+  const [registerShow, setRegisterShow] = useState(false);
+
+  let username: string = "Will";
+
   const loggedIn = useSelector((state: State) => state.loggedIn);
 
   return (
     <>
       <header className="navbar">
-        {/* -----mobile stuff
-        <button
-          className="mobile-nav-button no-select"
-          aria-controls="nav-items"
-          aria-expanded="false"
-          data-open="false"
-        >
-          <span className="sr-only">Menu</span> 
-        </button>*/}
         <NavLink className="logo" to="/">
-          <img className="logo-image" src={require("")}></img>
+          {/* <img className="logo-image" src={require("")}></img> */}
         </NavLink>
         <nav>
           <ul id="nav-items" className="nav-items" data-visible="false">
@@ -104,7 +101,9 @@ export const NavBar = () => {
                   className="link"
                   onClick={() => {
                     setRegisterShow(false);
-                    onLogoutButtonClick();
+                    {
+                      /* onLogoutButtonClick(); */
+                    }
                   }}
                   to="/"
                 >
@@ -117,7 +116,7 @@ export const NavBar = () => {
       </header>
       <LoginModal
         show={modalShow}
-        registershow={registerShow}
+        registerShow={registerShow}
         onHide={() => setModalShow(false)}
       />
     </>

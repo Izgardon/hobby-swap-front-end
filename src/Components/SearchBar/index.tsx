@@ -3,7 +3,7 @@ import React from "react";
 
 interface testProps {}
 
-export const test = (props: testProps) => {
+export const SearchBar = (props: testProps) => {
   const [search, setSearch] = useState("");
 
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
